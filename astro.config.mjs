@@ -19,13 +19,27 @@ export default defineConfig({
       getEnvObjectFromRequestContext: () => import.meta.env,
       cmsConfig: {
         local_backend: import.meta.env.MODE === "development",
-        backend: { name: "git-gateway", branch: "main" },
+        backend: {
+          name: "github",
+          repo: "emiliodeg/developtus",
+          branch: "main",
+          commit_messages: {
+            create: 'Create {{collection}} "{{slug}}"',
+            update: 'Update {{collection}} "{{slug}}"',
+            delete: 'Delete {{collection}} "{{slug}}"',
+            deleteMedia: 'Delete media file "{{filename}}"',
+            openAuthoring: 'Open authoring for {{collection}} "{{slug}}"',
+            uploadMedia: 'Upload media file "{{filename}}"',
+          },
+        },
         media_folder: "public",
         public_folder: "public",
         collections: [
           {
             label: "Blog posts",
             name: "blog",
+            create: true,
+            slug: "{{slug}}",
             folder: "src/content/blog",
             fields: [
               { name: "title", label: "Title", widget: "string" },
