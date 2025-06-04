@@ -10,10 +10,10 @@ tabs.sort((a, b) => a.data.order - b.data.order);
     {
       tabs.map((tab, index) => {
         const url = `/${index ? tab.id : ""}`;
-        const isActive = Astro.url.pathname === url  ? "active" : "";
+        const isActive = Astro.url.pathname === url ? "active" : "";
         return (
-          <li>
-            <a href={url} class={isActive}>{tab.data.title}</a>
+          <li class={isActive}>
+            <a href={url}>{tab.data.title}</a>
           </li>
         );
       })
