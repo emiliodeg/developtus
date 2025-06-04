@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+  margin-block-end: 0;
+}
+
+ul,
+ol {
+  &[role="list"] {
+    list-style: none;
+  }
+}
+
+body {
+  min-height: 100dvh;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+
+  &:first-child {
+    margin-block-start: 0;
+  }
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.sr-only {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+:root {
+  --surface: #181617;
+  --surface-variant: #4b5563;
+  --on-surface: #edece4;
+  --gap-sm: 1em;
+  --gap-md: 2em;
+  --gap-lg: 3em;
+}
+
+body {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    Liberation Mono, Courier New, monospace;
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
+
+main {
+  display: grid;
+  grid-template: "aside" "content";
+  border: 1px solid var(--surface-variant);
+  border-radius: var(--gap-sm);
+  padding: calc(var(--gap-md) * 0.75) var(--gap-md);
+  gap: var(--gap-md);
+  max-width: 1200px;
+  margin-inline: auto;
+
+  > aside {
+    grid-area: aside;
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 1px;
+      background-color: var(--surface-variant);
+      position: absolute;
+      inset: auto calc(-1 * var(--gap-md)) calc(var(--gap-md) / -2);
+    }
+  }
+
+  > article {
+    grid-area: content;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    grid-template: "aside content" / minmax(200px, 400px) 1fr;
+    gap: var(--gap-lg);
+
+    > aside {
+      &::after {
+        inset: calc(-1 * var(--gap-lg) / 2);
+        left: auto;
+        width: 1px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-balance {
+  text-wrap: balance;
+}

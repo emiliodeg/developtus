@@ -2,8 +2,6 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import decap from "astro-decap";
-
 import netlify from "@astrojs/netlify";
 import decapCMS from "astro-decap";
 
