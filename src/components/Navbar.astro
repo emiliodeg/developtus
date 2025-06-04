@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+
+const tabs = await getCollection("tabs");
+tabs.sort((a, b) => a.data.order - b.data.order);
+---
+
+<nav>
+  <ul>
+    {
+      tabs.map((tab, index) => {
+        const url = `/${index ? tab.id : ""}`;
+        const isActive = Astro.url.pathname === url  ? "active" : "";
+        return (
+          <li>
+            <a href={url} class={isActive}>{tab.data.title}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
