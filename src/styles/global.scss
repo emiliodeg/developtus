@@ -117,7 +117,7 @@ body {
 
 main {
   display: grid;
-  grid-template: "aside" "content";
+  grid-template: "aside" "navbar" "content";
   border: 1px solid var(--surface-variant);
   border-radius: var(--gap-sm);
   padding: calc(var(--gap-md) * 0.75) var(--gap-md);
@@ -141,12 +141,16 @@ main {
   > article {
     grid-area: content;
   }
+  
+  > nav {
+    grid-area: navbar;
+  }
 }
 
 @media screen and (min-width: 768px) {
   main {
-    grid-template: "aside content" / minmax(200px, 400px) 1fr;
-    gap: var(--gap-lg);
+    grid-template: "aside navbar" "aside content" / minmax(200px, 25%) 1fr;
+    gap: var(--gap-sm) var(--gap-lg);
 
     > aside {
       &::after {
@@ -163,6 +167,11 @@ main {
   text-align: center;
 }
 
-.text-balance {
-  text-wrap: balance;
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: var(--gap-sm);
+  margin: 0;
+  padding: 0;
 }

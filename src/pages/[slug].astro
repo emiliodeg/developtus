@@ -6,7 +6,19 @@ import { SITE_TITLE, SITE_DESCRIPTION, SOCIAL_LINKS } from "../consts";
 const tabs = await getCollection("tabs");
 tabs.sort((a, b) => a.data.order - b.data.order);
 
-const { Content } = await render(tabs[0]);
+export async function getStaticPaths() {
+  const tabs = await getCollection("tabs");
+  return tabs
+    .filter((tab) => !!tab.data.order)
+    .map((tab) => ({
+      params: { slug: tab.id },
+      props: tab,
+    }));
+}
+type Props = CollectionEntry<"tabs">;
+
+const tab = Astro.props;
+const { Content } = await render(tab);
 ---
 
 <!doctype html>

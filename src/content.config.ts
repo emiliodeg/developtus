@@ -15,4 +15,13 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const tabs = defineCollection({
+  loader: glob({ base: "./src/content/tabs", pattern: "**/*.{md,mdx}" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    order: z.number().gte(0),
+  }),
+});
+
+export const collections = { blog, tabs };
