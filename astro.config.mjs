@@ -8,7 +8,7 @@ import decapCMS from "astro-decap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://developtus.com",
-
+  base: '/',
   integrations: [
     mdx(),
     sitemap(),
