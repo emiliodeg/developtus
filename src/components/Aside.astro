@@ -1,0 +1,38 @@
+---
+import { Picture } from "astro:assets";
+import avatar from "../assets/emilio-degiovanni.jpg";
+import { SOCIAL_LINKS } from "../consts";
+---
+
+<aside>
+  <Picture
+    src={avatar}
+    widths={[300, 450]}
+    sizes="300px, (min-width: 400px) and (max-width: 768px) 450px, 300px"
+    alt="Emilio Degiovanni"
+    formats={["webp", "avif"]}
+    class="img-fluid rounded-circle mb-3"
+  />
+  <h2 class="text-center"><a href="/">Emilio Degiovanni</a></h2>
+  <p>
+    Senior Frontend Engineer, Angular & TypeScript specialist, and UI that
+    performs and scales. Driven by clean code and great UX, I build fast,
+    scalable, and modern web apps using Angular.
+  </p>
+  <ul>
+    {
+      SOCIAL_LINKS.map(({ href, label, download }) => (
+        <li>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            download={download}
+          >
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</aside>

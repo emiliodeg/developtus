@@ -1,11 +1,10 @@
 ---
-import { Picture } from "astro:assets";
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import { ClientRouter } from "astro:transitions";
-import avatar from "../assets/emilio-degiovanni.jpg";
+import Aside from "../components/Aside.astro";
 import BaseHead from "../components/BaseHead.astro";
 import Navbar from "../components/Navbar.astro";
-import { SITE_DESCRIPTION, SOCIAL_LINKS } from "../consts";
+import { SITE_DESCRIPTION } from "../consts";
 
 const tabs = await getCollection("tabs");
 tabs.sort((a, b) => a.data.order - b.data.order);
@@ -38,38 +37,7 @@ const { Content } = await render(tab);
       <article>
         <Content />
       </article>
-      <aside>
-        <Picture
-          src={avatar}
-          widths={[300, 450]}
-          sizes="300px, (min-width: 400px) and (max-width: 768px) 450px, 300px"
-          alt="Emilio Degiovanni"
-          formats={["webp", "avif"]}
-          class="img-fluid rounded-circle mb-3"
-        />
-        <h2 class="text-center"><a href="/">Emilio Degiovanni</a></h2>
-        <p>
-          Senior Frontend Engineer, Angular & TypeScript specialist, and UI that
-          performs and scales. Driven by clean code and great UX, I build fast,
-          scalable, and modern web apps using Angular.
-        </p>
-        <ul>
-          {
-            SOCIAL_LINKS.map(({ href, label, download }) => (
-              <li>
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download={download}
-                >
-                  {label}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </aside>
+      <Aside />
     </main>
   </body>
 </html>

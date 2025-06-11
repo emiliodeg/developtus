@@ -5,6 +5,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Navbar from "../components/Navbar.astro";
 import { SITE_DESCRIPTION, SITE_TITLE, SOCIAL_LINKS } from "../consts";
 import { getFirstTab } from "../utils/tabs.helper";
+import Aside from "../components/Aside.astro";
 
 const { Content } = await render(await getFirstTab());
 ---
@@ -21,30 +22,7 @@ const { Content } = await render(await getFirstTab());
       <article>
         <Content />
       </article>
-      <aside>
-        <h2 class="text-center"><a href="/">Emilio Degiovanni</a></h2>
-        <p>
-          Senior Frontend Engineer, Angular & TypeScript specialist, and UI that
-          performs and scales. Driven by clean code and great UX, I build fast,
-          scalable, and modern web apps using Angular.
-        </p>
-        <ul>
-          {
-            SOCIAL_LINKS.map(({ href, label, download }) => (
-              <li>
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download={download}
-                >
-                  {label}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </aside>
+      <Aside />
     </main>
   </body>
 </html>
