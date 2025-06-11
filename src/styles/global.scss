@@ -3,7 +3,7 @@
   --surface-variant: #4b5563;
   --on-surface: #edece4;
   --on-surface-variant: #b6babe;
-  --accent: #893dd1;
+  --accent: #4AF5DE  ;
   --gap-sm: 1em;
   --gap-md: 2em;
   --gap-lg: 3em;
@@ -186,10 +186,11 @@ nav {
 
     a {
       padding: var(--gap-sm) var(--gap-md);
+      border-bottom: 0 solid transparent;
       border-right: 1px solid var(--surface-variant);
       text-decoration: none;
       display: block;
-      transition: color 0.3s ease;
+      transition: border-bottom 0.3s ease, color 0.3s ease;
 
       &:hover {
         transition: color 0.3s ease;
@@ -198,7 +199,8 @@ nav {
     }
 
     .active {
-      outline: 2px solid var(--accent);
+      transition: border-bottom 0.3s ease;
+      border-bottom: 2px solid var(--accent);
     }
   }
 }

@@ -1,11 +1,11 @@
 ---
 import { render } from "astro:content";
 import { ClientRouter } from "astro:transitions";
+import Aside from "../components/Aside.astro";
 import BaseHead from "../components/BaseHead.astro";
 import Navbar from "../components/Navbar.astro";
-import { SITE_DESCRIPTION, SITE_TITLE, SOCIAL_LINKS } from "../consts";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import { getFirstTab } from "../utils/tabs.helper";
-import Aside from "../components/Aside.astro";
 
 const { Content } = await render(await getFirstTab());
 ---
