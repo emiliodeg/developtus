@@ -137,6 +137,12 @@ main {
     padding: var(--gap-md);
     border-bottom: 1px solid var(--surface-variant);
 
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;      
+    }
+
     p {
       color: var(--on-surface-variant);
     }
@@ -184,7 +190,7 @@ nav {
       text-decoration: none;
       display: block;
       transition: color 0.3s ease;
-      
+
       &:hover {
         transition: color 0.3s ease;
         color: var(--accent);

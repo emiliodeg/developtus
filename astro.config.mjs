@@ -80,4 +80,10 @@ export default defineConfig({
     }),
   ],
   adapter: netlify(),
+  image: {
+    experimentalLayout: 'constrained',
+  },
+  experimental: {
+    responsiveImages: true,
+  },
 });

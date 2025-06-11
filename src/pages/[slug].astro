@@ -1,9 +1,11 @@
 ---
+import { Picture } from "astro:assets";
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import { ClientRouter } from "astro:transitions";
+import avatar from "../assets/emilio-degiovanni.jpg";
 import BaseHead from "../components/BaseHead.astro";
 import Navbar from "../components/Navbar.astro";
-import { SITE_DESCRIPTION, SITE_TITLE, SOCIAL_LINKS } from "../consts";
+import { SITE_DESCRIPTION, SOCIAL_LINKS } from "../consts";
 
 const tabs = await getCollection("tabs");
 tabs.sort((a, b) => a.data.order - b.data.order);
@@ -17,6 +19,7 @@ export async function getStaticPaths() {
       props: tab,
     }));
 }
+
 type Props = CollectionEntry<"tabs">;
 
 const tab = Astro.props;
@@ -26,7 +29,7 @@ const { Content } = await render(tab);
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={tab.data.title} description={SITE_DESCRIPTION} />
     <ClientRouter />
   </head>
   <body>
@@ -36,6 +39,14 @@ const { Content } = await render(tab);
         <Content />
       </article>
       <aside>
+        <Picture
+          src={avatar}
+          widths={[300, 450]}
+          sizes="300px, (min-width: 400px) and (max-width: 768px) 450px, 300px"
+          alt="Emilio Degiovanni"
+          formats={["webp", "avif"]}
+          class="img-fluid rounded-circle mb-3"
+        />
         <h2 class="text-center"><a href="/">Emilio Degiovanni</a></h2>
         <p>
           Senior Frontend Engineer, Angular & TypeScript specialist, and UI that
