@@ -2,7 +2,8 @@
 title: "Who am I and where do I come from?"
 description: "Let me tell you my short personal & profesional story."
 pubDate: "10/01/2025"
-heroImage: "/blog-placeholder-3.jpg"
+heroImage: "./who-am-i.webp"
+heroImageAlt: "a comic of me typing on a laptop"
 ---
 
 I'm going to try to put my story into words for those who don't know me, or for those who want to understand what it's like to live as a systems engineer, developer, programmer, etc., in a highly competitive world.

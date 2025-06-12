@@ -1,4 +1,5 @@
 ---
+import { Picture } from "astro:assets";
 import Aside from "@/components/Aside.astro";
 import FormattedDate from "@/components/FormattedDate.astro";
 import Head from "@/components/Head.astro";
@@ -29,7 +30,13 @@ const { Content } = await render(post);
   <body>
     <main>
       <Navbar />
-      <article>
+      <article class="blog-post">
+        <Picture
+          src={post.data.heroImage}
+          widths={[300, 450, 600, 800, 1200]}
+          alt={post.data.heroImageAlt}
+          formats={["webp", "avif"]}
+        />
         <h1>{post.data.title}</h1>
         <FormattedDate date={post.data.pubDate} />
         <p>{post.data.description}</p>

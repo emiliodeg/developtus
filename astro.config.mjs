@@ -30,7 +30,7 @@ export default defineConfig({
             uploadMedia: 'Upload media file "{{filename}}"',
           },
         },
-        media_folder: "public",
+        media_folder: "src/assets",
         public_folder: "public",
         collections: [
           {
@@ -57,7 +57,11 @@ export default defineConfig({
                 name: "heroImage",
                 label: "Hero image",
                 widget: "image",
-                required: false,
+              },
+              {
+                name: "heroImageAlt",
+                label: "Hero image alt text",
+                widget: "string",
               },
               { name: "body", widget: "markdown" },
             ],

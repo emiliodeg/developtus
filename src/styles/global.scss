@@ -220,3 +220,8 @@ h4,
 strong {
   color: var(--accent);
 }
+
+.blog-post > picture {
+  margin: calc(var(--gap-md) * -1) calc(var(--gap-md) * -1) var(--gap-md);
+  max-width: max-content;
+}
