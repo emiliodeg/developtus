@@ -8,10 +8,12 @@ import decapCMS from "astro-decap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://developtus.com",
-  base: '/',
+  base: "/",
   integrations: [
     mdx(),
-    sitemap(),
+    sitemap({
+      serialize: (entry) => ({ ...entry, url: entry.url.replace(/\/$/, "") }),
+    }),
     decapCMS({
       injectOAuthRoute: true,
       getEnvObjectFromRequestContext: () => import.meta.env,
@@ -85,7 +87,7 @@ export default defineConfig({
   ],
   adapter: netlify(),
   image: {
-    experimentalLayout: 'constrained',
+    experimentalLayout: "constrained",
   },
   experimental: {
     responsiveImages: true,
