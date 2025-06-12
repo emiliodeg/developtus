@@ -19,9 +19,9 @@ import { SOCIAL_LINKS } from "@/consts";
     performs and scales. Driven by clean code and great UX, I build fast,
     scalable, and modern web apps using Angular.
   </p>
-  <ul>
+  <ul class="social-links">
     {
-      SOCIAL_LINKS.map(({ href, label, download }) => (
+      SOCIAL_LINKS.map(({ href, label, download, icon, color }) => (
         <li>
           <a
             href={href}
@@ -29,7 +29,12 @@ import { SOCIAL_LINKS } from "@/consts";
             rel="noopener noreferrer"
             download={download}
           >
-            {label}
+            {icon && (
+              <svg width="24" height="24" style={{ color }}>
+                <use href={`/icons.svg#${icon}`} />
+              </svg>
+            )}
+            <span>{label}</span>
           </a>
         </li>
       ))

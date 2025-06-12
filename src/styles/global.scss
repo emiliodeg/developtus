@@ -225,3 +225,19 @@ strong {
   margin: calc(var(--gap-md) * -1) calc(var(--gap-md) * -1) var(--gap-md);
   max-width: max-content;
 }
+
+.social-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+  padding-left: 0;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    text-decoration: none;
+  }
+}
