@@ -116,6 +116,15 @@ a:visited {
   white-space: nowrap;
 }
 
+.text-italic {
+  font-style: italic;
+}
+
+.fs-sm {
+  font-size: 0.875rem; 
+}
+
+
 // Typography and layout styles
 body {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,

@@ -1,6 +1,6 @@
 ---
-import "../styles/global.scss";
-import { SITE_TITLE } from "../consts";
+import "@/styles/global.scss";
+import { SITE_TITLE } from "@/consts";
 
 interface Props {
   title: string;
@@ -49,11 +49,12 @@ const url = Astro.url.toString().replace(/\/$/, "");
 <meta property="twitter:description" content={description} />
 {image && <meta property="twitter:image" content={new URL(image, url)} />}
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C9JQ2TQEWT"></script>
+{/* Google tag (gtag.js) */}
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-C9JQ2TQEWT"></script>
 <script>
+  // @ts-nocheck
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){window.dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-C9JQ2TQEWT');
 </script>

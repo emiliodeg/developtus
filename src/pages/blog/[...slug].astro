@@ -1,7 +1,11 @@
 ---
+import Aside from "@/components/Aside.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
+import Head from "@/components/Head.astro";
+import Navbar from "@/components/Navbar.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
-import BlogPost from "../../layouts/BlogPost.astro";
 import { render } from "astro:content";
+import { ClientRouter } from "astro:transitions";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -16,6 +20,23 @@ const post = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogPost {...post.data}>
-  <Content />
-</BlogPost>
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head title={post.data.title} description={post.data.description} />
+    <ClientRouter />
+  </head>
+  <body>
+    <main>
+      <Navbar />
+      <article>
+        <h1>{post.data.title}</h1>
+        <FormattedDate date={post.data.pubDate} />
+        <p>{post.data.description}</p>
+
+        <Content />
+      </article>
+      <Aside />
+    </main>
+  </body>
+</html>

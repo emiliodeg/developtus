@@ -1,10 +1,10 @@
 ---
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import { ClientRouter } from "astro:transitions";
-import Aside from "../components/Aside.astro";
-import BaseHead from "../components/BaseHead.astro";
-import Navbar from "../components/Navbar.astro";
-import { SITE_DESCRIPTION } from "../consts";
+import Aside from "@/components/Aside.astro";
+import Head from "@/components/Head.astro";
+import Navbar from "@/components/Navbar.astro";
+import { SITE_DESCRIPTION } from "@/consts";
 
 const tabs = await getCollection("tabs");
 tabs.sort((a, b) => a.data.order - b.data.order);
@@ -28,7 +28,7 @@ const { Content } = await render(tab);
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={tab.data.title} description={SITE_DESCRIPTION} />
+    <Head title={tab.data.title} description={SITE_DESCRIPTION} />
     <ClientRouter />
   </head>
   <body>
