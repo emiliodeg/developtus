@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://<TU SITIO>/sitemap-index.xml
+Sitemap: https://developtus.com/sitemap-index.xml

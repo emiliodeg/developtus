@@ -5,8 +5,8 @@
   --surface-on-surface-variant: #4b5563;
   --on-surface: #edece4;
   --on-surface-variant: #b6babe;
-  --primary: #4AF5DE;
-  --secondary: #0F8;
+  --primary: #4af5de;
+  --secondary: #0f8;
   --gap-sm: 1em;
   --gap-md: 2em;
   --gap-lg: 3em;
@@ -124,7 +124,7 @@ a:visited {
 }
 
 .fs-sm {
-  font-size: 0.875rem; 
+  font-size: 0.875rem;
 }
 // #endregion Reset and base styles
 
@@ -153,7 +153,7 @@ main {
     img {
       width: 100%;
       height: auto;
-      border-radius: 50%;      
+      border-radius: 50%;
     }
 
     p {
@@ -248,6 +248,22 @@ strong {
     align-items: center;
     gap: var(--gap-sm);
     text-decoration: none;
+    transition: color 0.3s ease;
+
+    svg {
+      transition: color 0.3s ease;
+      color: rgb(var(--hover-color));
+    }
+
+    &:hover {
+      transition: color 0.3s ease;
+      color: rgba(var(--hover-color), 0.9);
+      
+      svg {
+        transition: color 0.3s ease;
+        color: rgba(var(--hover-color), 0.9);
+      }
+    }
   }
 }
 
