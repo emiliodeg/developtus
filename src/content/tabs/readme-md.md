@@ -3,6 +3,9 @@ title: README.md
 description: Introduction
 order: 0
 ---
+
+<pre class="command"><code>$ cat README.md</code></pre>
+
 # Welcome to my website
         
 I'm Emilio José Degiovanni, a frontend developer specialized in Angular with over 22 years of experience in software development — 7 years focused on frontend and 15 years as a fullstack developer. I'm based in Córdoba, Argentina, and currently work remotely for EPAM

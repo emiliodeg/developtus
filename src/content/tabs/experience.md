@@ -3,6 +3,9 @@ title: Experience
 description: I worked in many projects and companies
 order: 1
 ---
+
+<pre class="command"><code>$ cat experience.json</code></pre>
+
 These companies
 
 1. Epam

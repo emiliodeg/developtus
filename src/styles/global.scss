@@ -1,15 +1,18 @@
 :root {
-  --surface: #181617;
-  --surface-variant: #4b5563;
+  --under-surface: #181617;
+  --surface: #11182780;
+  --surface-on-surface: #1f2937;
+  --surface-on-surface-variant: #4b5563;
   --on-surface: #edece4;
   --on-surface-variant: #b6babe;
-  --accent: #4AF5DE  ;
+  --primary: #4AF5DE;
+  --secondary: #0F8;
   --gap-sm: 1em;
   --gap-md: 2em;
   --gap-lg: 3em;
 }
 
-// Reset and base styles
+// #region Reset and base styles
 *,
 *::before,
 *::after {
@@ -123,28 +126,29 @@ a:visited {
 .fs-sm {
   font-size: 0.875rem; 
 }
-
+// #endregion Reset and base styles
 
 // Typography and layout styles
 body {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     Liberation Mono, Courier New, monospace;
-  background-color: var(--surface);
+  background-color: var(--under-surface);
   color: var(--on-surface);
 }
 
 main {
   display: grid;
   grid-template: "aside" "navbar" "content";
-  border: 1px solid var(--surface-variant);
+  border: 1px solid var(--surface-on-surface-variant);
   border-radius: var(--gap-sm);
   max-width: 1200px;
   margin-inline: auto;
+  background-color: var(--surface);
 
   > aside {
     grid-area: aside;
     padding: var(--gap-md);
-    border-bottom: 1px solid var(--surface-variant);
+    border-bottom: 1px solid var(--surface-on-surface-variant);
 
     img {
       width: 100%;
@@ -174,7 +178,7 @@ main {
       "aside content" 1fr / minmax(200px, 25%) 1fr;
 
     > aside {
-      border-right: 1px solid var(--surface-variant);
+      border-right: 1px solid var(--surface-on-surface-variant);
       border-bottom: none;
     }
   }
@@ -185,7 +189,7 @@ main {
 }
 
 nav {
-  border-bottom: 1px solid var(--surface-variant);
+  border-bottom: 1px solid var(--surface-on-surface-variant);
   ul {
     display: flex;
     flex-direction: row;
@@ -196,20 +200,21 @@ nav {
     a {
       padding: var(--gap-sm) var(--gap-md);
       border-bottom: 0 solid transparent;
-      border-right: 1px solid var(--surface-variant);
+      border-right: 1px solid var(--surface-on-surface-variant);
       text-decoration: none;
       display: block;
       transition: border-bottom 0.3s ease, color 0.3s ease;
 
       &:hover {
         transition: color 0.3s ease;
-        color: var(--accent);
+        color: var(--primary);
       }
     }
 
     .active {
       transition: border-bottom 0.3s ease;
-      border-bottom: 2px solid var(--accent);
+      border-bottom: 2px solid var(--primary);
+      background-color: var(--surface-on-surface);
     }
   }
 }
@@ -218,7 +223,7 @@ h1,
 h3,
 h4,
 strong {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .blog-post > picture {
@@ -239,5 +244,13 @@ strong {
     align-items: center;
     gap: var(--gap-sm);
     text-decoration: none;
+  }
+}
+
+.command {
+  color: var(--secondary);
+
+  &:first-child {
+    margin-top: 0;
   }
 }
