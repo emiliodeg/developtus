@@ -1,11 +1,11 @@
 ---
+import Aside from "@/components/Aside.astro";
+import Head from "@/components/Head.astro";
+import Navbar from "@/components/Navbar.astro";
+import { SITE_DESCRIPTION, SITE_TITLE_HERO } from "@/consts";
+import { getFirstTab } from "@/utils/tabs.helper";
 import { render } from "astro:content";
 import { ClientRouter } from "astro:transitions";
-import Head from "@/components/Head.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
-import Navbar from "@/components/Navbar.astro";
-import { getFirstTab } from "@/utils/tabs.helper";
-import Aside from "@/components/Aside.astro";
 
 const { Content } = await render(await getFirstTab());
 ---
@@ -13,7 +13,7 @@ const { Content } = await render(await getFirstTab());
 <!doctype html>
 <html lang="en">
   <head>
-    <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <Head title={SITE_TITLE_HERO} description={SITE_DESCRIPTION} />
     <ClientRouter />
   </head>
   <body>

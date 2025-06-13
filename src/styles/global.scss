@@ -159,6 +159,10 @@ main {
     p {
       color: var(--on-surface-variant);
     }
+
+    a {
+      text-decoration-color: var(--primary);
+    }
   }
 
   > article {

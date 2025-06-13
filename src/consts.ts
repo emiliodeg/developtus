@@ -2,7 +2,8 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = "Emilio Degiovanni";
-export const SITE_DESCRIPTION = "Welcome to my website!";
+export const SITE_TITLE_HERO = "Emilio Degiovanni - Senior Frontend Engineer";
+export const SITE_DESCRIPTION = "Angular, Material & TypeScript specialist, and Apps that performs and scales. I build fast, scalable, and modern web apps using Angular.";
 export const SOCIAL_LINKS = [
   {
     label: "LinkedIn",

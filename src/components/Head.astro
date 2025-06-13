@@ -9,9 +9,12 @@ interface Props {
 }
 
 const { description, image = "/blog-placeholder-1.jpg" } = Astro.props;
-let { title } = Astro.props;
 
-title = title !== SITE_TITLE ? `${title} - ${SITE_TITLE}` : SITE_TITLE;
+let { title } = Astro.props;
+if (Astro.url.pathname === "/") {
+  title = `${title} - ${SITE_TITLE}`;
+}
+
 const url = Astro.url.toString().replace(/\/$/, "");
 ---
 
@@ -50,11 +53,16 @@ const url = Astro.url.toString().replace(/\/$/, "");
 {image && <meta property="twitter:image" content={new URL(image, url)} />}
 
 {/* Google tag (gtag.js) */}
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-C9JQ2TQEWT"></script>
+<script
+  is:inline
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-C9JQ2TQEWT"></script>
 <script>
   // @ts-nocheck
   window.dataLayer = window.dataLayer || [];
-  function gtag(){window.dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-C9JQ2TQEWT');
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-C9JQ2TQEWT");
 </script>
