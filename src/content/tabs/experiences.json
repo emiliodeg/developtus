@@ -1,0 +1,25 @@
+[
+  {
+    "name": "EPAM",
+    "role": "Frontend Engineer",
+    "period": "March 2024 - Present",
+    "location": "Princeton, NJ, USA (Remote)",
+    "description": "I am in charge of migrating applications made in Angular v13 to v18. Refactoring to improve performance, reusability, and good practices on private libraries and applications. Coding review. Adding unit, integration, and e2e testing, with Jest, Testing library for Angular, also Storybooks with play functions. Azure CICD, Jira. Implementing signals.",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "Material UI",
+      "Jest",
+      "Storybook",
+      "Jenkins",
+      "Jira"
+    ],
+    "highlights": [
+      "Migrated Angular applications from v13 to v18",
+      "Improved performance and code reusability",
+      "Implemented comprehensive testing strategies",
+      "Jenkins CI/CD pipeline integration",
+      "Testing with Jest, Testing Library and Storybook"
+    ]
+  }
+]
