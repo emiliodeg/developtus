@@ -11,7 +11,7 @@ interface Props {
 const { description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 
 let { title } = Astro.props;
-if (Astro.url.pathname === "/") {
+if (Astro.url.pathname !== "/") {
   title = `${title} - ${SITE_TITLE}`;
 }
 
