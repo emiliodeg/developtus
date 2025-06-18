@@ -3,7 +3,6 @@ title: Experience
 description: I worked in many projects and companies
 order: 1
 ---
-import experience from './experiences.json';
 
 <pre class="command"><code>$ cat experience.json</code></pre>
 
@@ -11,35 +10,6 @@ Seasoned Frontend Engineer driven by clean architecture, performance, and scalab
 
 Below, you'll find a selection of companies where I've had the opportunity to contribute and grow as a professional.
 
-<ol class="experiences">
-    {experience.map((company, index) => (
-        <li>
-            <h3 class="experiences--title">{index + 1}. {company.name}</h3>
-            <p class="experiences--subtitle">{company.period} • {company.location}</p>
-            <h4 class="experiences--role">{company.role}</h4>
-            <p class="text-gray-300 leading-relaxed">{company.description}</p>
-            
-            {company.technologies && (
-                <>
-                    <h5 class="experiences--topic">Technologies:</h5>
-                    <ul class="experiences--techs">
-                        {company.technologies.map((tech) => (
-                        <li class="experiences--techs-item">{tech}</li>
-                        ))}
-                    </ul>
-                </>
-            )}
-            
-            {company.highlights && (
-                <>
-                    <h5 class="experiences--topic">Key Achievements:</h5>
-                    <ul>
-                        {company.highlights.map((highlight) => (
-                        <li>{highlight}</li>
-                        ))}
-                    </ul>
-                </>
-            )}
-        </li>
-    ))}
-</ol>
+import Experiences from '@/components/Experiences.astro';
+
+<Experiences />

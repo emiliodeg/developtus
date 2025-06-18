@@ -1,4 +1,4 @@
-import { glob } from "astro/loaders";
+import { file, glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
 const blog = defineCollection({
@@ -23,4 +23,17 @@ const tabs = defineCollection({
   }),
 });
 
-export const collections = { blog, tabs };
+const experiences = defineCollection({
+  loader: file("src/content/experiences.json"),
+  schema: z.object({
+    name: z.string(),
+    role: z.string(),
+    period: z.string(),
+    location: z.string(),
+    description: z.string(),
+    technologies: z.array(z.string()),
+    highlights: z.array(z.string()),
+  }),
+});
+
+export const collections = { blog, tabs, experiences };

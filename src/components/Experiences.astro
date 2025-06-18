@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+
+const experiences = await getCollection("experiences");
+---
+
+
+<ol class="experiences">
+  {
+    experiences.map(({ data }, index) => (
+      <li>
+        <h3 class="experiences--title">
+          {index + 1}. {data.name}
+        </h3>
+        <p class="experiences--subtitle">
+          {data.period} • {data.location}
+        </p>
+        <h4 class="experiences--role">{data.role}</h4>
+        <p class="text-gray-300 leading-relaxed">{data.description}</p>
+
+        {data.technologies && (
+          <>
+            <h5 class="experiences--topic">Technologies:</h5>
+            <ul class="experiences--techs">
+              {data.technologies.map((tech) => (
+                <li class="experiences--techs-item">{tech}</li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {data.highlights && (
+          <>
+            <h5 class="experiences--topic">Key Achievements:</h5>
+            <ul>
+              {data.highlights.map((highlight) => (
+                <li>{highlight}</li>
+              ))}
+            </ul>
+          </>
+        )}
+      </li>
+    ))
+  }
+</ol>
