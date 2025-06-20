@@ -10,17 +10,146 @@
       "Angular",
       "TypeScript",
       "Material UI",
+      "NGRX",
       "Jest",
       "Storybook",
       "Jenkins",
       "Jira"
     ],
     "highlights": [
+      "Health insurance industry experience with complex applications",
       "Migrated Angular applications from v13 to v18",
       "Improved performance and code reusability",
       "Implemented comprehensive testing strategies",
       "Jenkins CI/CD pipeline integration",
       "Testing with Jest, Testing Library and Storybook"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Byte Factory",
+    "role": "Frontend Engineer",
+    "period": "November 2023 - March 2024",
+    "location": "Madrid, Spain (Remote)",
+    "description": "As Senior Frontend Engineer, I was responsible for guiding the technical direction of the team and ensuring code quality, scalability, and performance across the application. I mentored junior and mid developers, conducted code reviews, and led architectural decisions. My work involved deep refactoring of core frontend layers—including components, services, directives, and forms—while implementing secure authentication and authorization mechanisms. The stack included Angular 16, TypeScript, RxJS, NgRx, and integration with APIs and BFFs. I also collaborated closely on testing strategies and CI/CD using Docker and Azure, within a high-demand retail environment.",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "BBF Design System",
+      "Prototyping UI",
+      "Business Analisis",
+      "Kanban"
+    ],
+    "highlights": [
+      "Retail industry experience with high-demand application",
+      "Led the frontend team and mentored junior developers",
+      "Refactored core architecture for performance and maintainability",
+      "Implemented secure authentication and role-based authorization",
+      "Drove testing strategy with unit and integration coverage",
+      "Worked with modern DevOps stack: Docker, GitLab, Azure CI/CD"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Double Nines",
+    "role": "Frontend Engineer",
+    "period": "June 2022 - November 2023",
+    "location": "Florida, USA (Remote)",
+    "description": "As Frontend Lead, I spearheaded the development of a custom component library built from Figma designs and powered by Kendo UI, fully documented with Storybook and covered by comprehensive testing. I led a distributed frontend team and drove the evolution of the application from Angular 13 to v15. A key part of my role was designing and implementing a scalable micro frontends architecture using Webpack Module Federation and NgRx for state management. I also integrated secure authentication with Okta and implemented fine-grained authorization using guards and structural directives. This work supported complex business workflows in the logistics industry, all deployed on AWS infrastructure. Additionally, I mentored junior engineers, fostering growth and code quality across the team.",
+    "technologies": [
+      "Angular",
+      "Micro Frontends with Module Federation",
+      "TypeScript",
+      "API's",
+      "Kendo UI",
+      "Private Libraries of UI Components",
+      "NGRX"
+    ],
+    "highlights": [
+      "Transportation industry experience",
+      "Built and released a reusable UI library from Figma using Kendo and Storybook",
+      "Designed and implemented micro frontend architecture with Module Federation",
+      "Integrated Okta authentication and custom role-based authorization",
+      "Led Angular migration efforts (v13 to v15) and coached junior developers",
+      "Delivered scalable solutions for the logistics domain on AWS"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Aquiva Labs",
+    "role": "Frontend Engineer",
+    "period": "January 2022 - May 2022",
+    "location": "Florida, USA (Remote)",
+    "description": "At Aquiva Labs, I contributed to a large-scale insurance platform built with Angular v8, Material, and NgRx. My role focused on stabilizing the application by identifying and resolving bugs, improving code quality, and ensuring reliability through robust unit testing. I also developed new features aligned with evolving business needs, collaborating closely with cross-functional teams in a fast-paced agile environment.",
+    "technologies": [
+      "Angular",
+      "Micro Frontends with Module Federation",
+      "TypeScript",
+      "API's",
+      "Kendo UI",
+      "Private Libraries of UI Components",
+      "NGRX",
+      "Testing with Jasmine"
+    ],
+    "highlights": [
+      "House insurance industry experience",
+      "Improved platform stability through critical bug fixes and testing",
+      "Delivered new features within a legacy Angular 8 codebase",
+      "Strengthened code quality with well-structured unit tests using Jasmine",
+      "Contributed to frontend efforts in a high-compliance insurance domain"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Cognizant Softvision",
+    "role": "Frontend Engineer",
+    "period": "November 2020 - May 2022",
+    "location": "Buenos Aires, Argentina (Remote)",
+    "description": "As Frontend Lead at Cognizant Softvision, I guided the development of complex enterprise applications, including a human resources platform and a payments system. I led a team working with Angular 9+, Material, and NGXS for state management, and acted as the main code reviewer ensuring quality, consistency, and best practices. I also conducted Angular technical interviews to evaluate and onboard new talent. My responsibilities included developing scalable modules for user and payment management, implementing 3D elements with Three.js, and writing unit tests with Jasmine.",
+    "technologies": [
+      "Angular",
+      "GraphQL",
+      "TypeScript",
+      "Material UI",
+      "NGXS",
+      "Jasmine",
+      "Three.js",
+      "Salesforce"
+    ],
+    "highlights": [
+      "Human Resources and Online Payments industry experience",
+      "Led frontend architecture and team for two enterprise platforms",
+      "Acted as primary Angular code reviewer and technical interviewer",
+      "Developed features for user and payment management at scale",
+      "Integrated NGXS for structured state management",
+      "Ensured high test coverage and code quality with Jasmine"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Globant",
+    "role": "Frontend Engineer",
+    "period": "November 2020 - May 2022",
+    "location": "Buenos Aires, Argentina (Remote)",
+    "description": "At Globant, I worked as a Frontend Engineer and Team Lead on multiple enterprise applications for clients like Ernst & Young, within the legal, contracts, and tax domain. Using Angular 8+ and Material, I led code reviews, mentored junior developers, and authored a comprehensive guide on clean code and best practices. I contributed to complex UI development, data visualization with D3.js, and end-to-end testing with Selenium. The projects followed Scrum and Kanban methodologies, and integrated tools like Azure DevOps, Jira, and REST APIs.",
+    "technologies": [
+      "Angular",
+      "GraphQL",
+      "Restful APIs",
+      "TypeScript",
+      "Material UI",
+      "D3.js",
+      "Selenium",
+      "Azure DevOps",
+      "Jira"
+    ],
+    "highlights": [
+      "Legal, contracts, and tax industry experience",
+      "Led frontend efforts for high-profile client projects (Ernst & Young)",
+      "Authored internal clean code and best practices guide",
+      "Mentored junior developers and performed rigorous code reviews",
+      "Delivered UI features with Angular, SCSS, and D3.js",
+      "Built testing strategies with Jest (unit/integration) and Selenium (e2e)"
     ]
   }
 ]
