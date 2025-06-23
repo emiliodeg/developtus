@@ -31,17 +31,21 @@ const { Content } = await render(post);
     <main>
       <Navbar />
       <article class="blog-post">
+        <pre class="command"><code>$ cat {post.id}.md</code></pre>
+        
         <Picture
-          src={post.data.heroImage}
-          widths={[300, 450, 600, 800, 1200]}
-          alt={post.data.heroImageAlt}
-          formats={["webp", "avif"]}
+        src={post.data.heroImage}
+        widths={[300, 450, 600, 800, 1200]}
+        alt={post.data.heroImageAlt}
+        formats={["webp", "avif"]}
         />
         <h1>{post.data.title}</h1>
         <FormattedDate date={post.data.pubDate} />
         <p>{post.data.description}</p>
-
+        
         <Content />
+        
+        <pre class="command"><code>$ <span class="the-end">|</span></code></pre>
       </article>
       <Aside />
     </main>
