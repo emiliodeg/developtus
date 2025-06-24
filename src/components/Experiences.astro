@@ -7,9 +7,9 @@ const experiences = await getCollection("experiences");
 
 <ol class="experiences">
   {
-    experiences.map(({ data }, index) => (
+    experiences.map(({ id, data }, index) => (
       <li>
-        <h3 class="experiences--title">
+        <h3 class="experiences--title" id={id}>
           {index + 1}. {data.name}
         </h3>
         <p class="experiences--subtitle">

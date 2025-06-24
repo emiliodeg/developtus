@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": "epam",
     "name": "EPAM",
     "role": "Frontend Engineer",
     "period": "March 2024 - Present",
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "id": "2",
+    "id": "byte-factory",
     "name": "Byte Factory",
     "role": "Frontend Engineer",
     "period": "November 2023 - March 2024",
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "id": "3",
+    "id": "double-nines",
     "name": "Double Nines",
     "role": "Frontend Engineer",
     "period": "June 2022 - November 2023",
@@ -75,7 +75,7 @@
     ]
   },
   {
-    "id": "4",
+    "id": "aquiva-labs",
     "name": "Aquiva Labs",
     "role": "Frontend Engineer",
     "period": "January 2022 - May 2022",
@@ -100,7 +100,7 @@
     ]
   },
   {
-    "id": "5",
+    "id": "cognizant-softvision",
     "name": "Cognizant Softvision",
     "role": "Frontend Engineer",
     "period": "November 2020 - May 2022",
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "id": "6",
+    "id": "globant",
     "name": "Globant",
     "role": "Frontend Engineer",
     "period": "November 2020 - May 2022",

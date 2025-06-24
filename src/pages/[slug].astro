@@ -5,9 +5,6 @@ import Navbar from "@/components/Navbar.astro";
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import { ClientRouter } from "astro:transitions";
 
-const tabs = await getCollection("tabs");
-tabs.sort((a, b) => a.data.order - b.data.order);
-
 export async function getStaticPaths() {
   const tabs = await getCollection("tabs");
   return tabs

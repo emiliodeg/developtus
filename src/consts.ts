@@ -4,7 +4,7 @@
 export const SITE_TITLE = "Emilio Degiovanni";
 export const SITE_TITLE_HERO = "Emilio Degiovanni - Senior Frontend Engineer";
 export const SITE_DESCRIPTION =
-  "Angular, Material & TypeScript specialist, and Apps that performs and scales. I build fast, scalable, and modern web apps using Angular.";
+  "Senior Angular Developer building high-performance, scalable web apps with Angular, Material, and TypeScript.";
 export const SOCIAL_LINKS = [
   {
     label: "LinkedIn",

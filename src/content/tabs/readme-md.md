@@ -1,6 +1,6 @@
 ---
 title: README.md
-description: Introduction
+description: Experienced Frontend Developer with 7+ years in Angular. Passionate about clean code, and delivering high-quality software solutions.
 order: 0
 ---
 
@@ -8,7 +8,7 @@ order: 0
 
 # Welcome to my website
         
-I'm Emilio José Degiovanni, a frontend developer specialized in Angular with over 22 years of experience in software development — 7 years focused on frontend and 15 years as a fullstack developer. I'm based in Córdoba, Argentina, and currently work remotely for EPAM
+I'm Emilio José Degiovanni, a frontend developer specialized in Angular with over 22 years of experience in software development — 7 years focused on frontend and 15 years as a fullstack developer. I'm based in Córdoba, Argentina, and [currently work remotely for EPAM](/experience#epam)
 (USA) in the healthcare industry, where I contribute to migrating and improving Angular and Material applications, promoting best practices, performance, and testing.
 
 Throughout my career, I've led frontend teams on international projects, mentoring junior developers, building private component libraries from scratch, implementing micro frontend architectures with Webpack Module Federation, and ensuring high-quality standards through
