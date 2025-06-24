@@ -20,7 +20,7 @@ export const SOCIAL_LINKS = [
   },
   {
     label: "My resume",
-    href: "/cv-english.pdf",
+    href: "/emilio-degiovanni-english.pdf",
     download: "Emilio Degiovanni Resume.pdf",
     icon: "download",
     color: "182, 186, 190", // #4078c0
