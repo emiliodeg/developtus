@@ -36,4 +36,17 @@ const experiences = defineCollection({
   }),
 });
 
-export const collections = { blog, tabs, experiences };
+const certificates = defineCollection({
+  loader: file("src/content/certificates.json"),
+  schema: z.object({
+    name: z.string(),
+    provider: z.string(),
+    releaseDate: z.coerce.date(),
+    id: z.string().optional(),
+    url: z.string().url().optional(),
+    description: z.string(),
+    technologies: z.array(z.string()),
+  }),
+});
+
+export const collections = { blog, tabs, experiences, certificates };

@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+
+const certificates = await getCollection("certificates");
+---
+
+<h2>Certificates</h2>
+
+<ol class="list">
+  {
+    certificates.map(({ id, data }) => (
+      <li>
+        <h3 class="list--title__secondary" id={id}>
+          {data.name}
+        </h3>
+        <h4 class="list--subtitle__secondary">{data.provider}</h4>
+        <p class="list--subtitle">
+          {data.releaseDate && <FormattedDate date={data.releaseDate} />}
+          {data.id && ` • ${data.id}`}
+        </p>
+        <p>{data.description}</p>
+
+        {data.technologies && (
+          <>
+            <h5 class="list--topic">Technologies:</h5>
+            <ul class="list--inline">
+              {data.technologies.map((tech) => (
+                <li class="list--inline-item">{tech}</li>
+              ))}
+            </ul>
+          </>
+        )}
+      </li>
+    ))
+  }
+</ol>
